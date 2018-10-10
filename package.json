@@ -1,6 +1,7 @@
 {
   "name": "card",
   "version": "1.0.0",
+  "homepage": "https://ajwarnick.github.io/card/",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +9,7 @@
     "start": "parcel source/index.html --open",
     "build": "parcel build source/index.html",
     "predeploy": "rm -rf dist && parcel source/index.html --public-url ./dist/",
-    "deploy": "ghpages.publish('dist', callback);"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
