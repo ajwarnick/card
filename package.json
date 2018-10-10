@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pug/index.pug --open",
-    "build": "parcel build src/pug/index.pug"
+    "start": "parcel source/index.html --open",
+    "build": "parcel build source/index.html",
+    "predeploy": "rm -rf dist && parcel source/index.html --public-url ./dist/",
+    "deploy": "ghpages.publish('dist', callback);"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "parcel-bundler": "^1.10.2",
     "sass": "^1.14.1"
   }
